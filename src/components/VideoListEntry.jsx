@@ -1,9 +1,5 @@
 var VideoListEntry = (props) => {
 
-  var onVideoListEntryClick = (event) => {
-    
-  };
-
   return (
     <div className="video-list-entry media">
       <div className="media-left media-middle">
@@ -26,3 +22,8 @@ VideoListEntry.propTypes = {
 // In the ES6 spec, files are "modules" and do not share a top-level scope
 // `var` declarations will only exist globally where explicitly defined
 window.VideoListEntry = VideoListEntry;
+
+// this.state = {
+//   firstVideo: exampleVideoData[0],
+//   allData: exampleVideoData
+// };
