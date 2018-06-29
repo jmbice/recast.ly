@@ -4,23 +4,23 @@ class App extends React.Component {
     this.state = {
       playerVideo: exampleVideoData[0],
       allData: exampleVideoData,
-      search: ''
+      search: 'Cute cat video',
     };
     this.selectVideo = this.selectVideo.bind(this);
     this.searchBarValue = this.searchBarValue.bind(this);
     this.searchYouTube = this.searchYouTube.bind(this);
   }
 
+  
   //future methods go here!
   selectVideo(e) {
     this.setState({ playerVideo: e });
   }
-
+  
   searchBarValue(event) {
-    console.log(this.state.search);
     this.setState({ search: event.target.value });
   }
-
+  
   searchYouTube() {
     var that = this;
     
@@ -44,9 +44,12 @@ class App extends React.Component {
         console.error('youtube: Failed to get videos');
       }
     });
-  
+    
   }
-
+  
+  componentDidMount() {
+    this.searchYouTube();
+  }
 
 
 
