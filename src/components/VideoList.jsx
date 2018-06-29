@@ -1,7 +1,7 @@
 var VideoList = (props) => (
   <div className="video-list">
-    {props.data.map(oneVideo =>
-      <VideoListEntry videoData={oneVideo} />
+    {props.videos.map((oneVideo, i) =>
+      <VideoListEntry video={oneVideo} onClick={props.method} key={i} />
     )}
   </div>
 );
@@ -20,8 +20,8 @@ VideoList.propTypes = {
 // `var` declarations will only exist globally where explicitly defined.
 window.VideoList = VideoList;
 
-{ /* <div><h5><em>videoListEntry</em> view goes here</h5></div>
-<div><h5><em>videoListEntry</em> view goes here</h5></div>
-<div><h5><em>videoListEntry</em> view goes here</h5></div>
-<div><h5><em>videoListEntry</em> view goes here</h5></div>
-<div><h5><em>videoListEntry</em> view goes here</h5></div> */ }
+// { /* <div><h5><em>videoListEntry</em> view goes here</h5></div>
+// <div><h5><em>videoListEntry</em> view goes here</h5></div>
+// <div><h5><em>videoListEntry</em> view goes here</h5></div>
+// <div><h5><em>videoListEntry</em> view goes here</h5></div>
+// <div><h5><em>videoListEntry</em> view goes here</h5></div> */ }
